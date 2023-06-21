@@ -1,4 +1,4 @@
 # Kodie List
 
 
-Original: [regexr.com/7fps2](https://regex101.com/r/bvWnF5/1)
+Original: https://regex101.com/r/bvWnF5/3
