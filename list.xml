@@ -1,17 +1,17 @@
 <!-- -------------------MAIN LIST------------------- -->
 <item>
-    <name>[COLOR orchid]Debrid Links:[/COLOR] Sites A-Z</name>
-    <link>$doregex[sites]</link>
-    <thumbnail></thumbnail>
-    <regex>
-        <name>sites</name>
-        <listrepeat>
-            <![CDATA[
+	<name>[COLOR orchid]Debrid Links:[/COLOR] Sites A-Z</name>
+	<link>$doregex[sites]</link>
+	<thumbnail></thumbnail>
+	<regex>
+		<name>sites</name>
+		<listrepeat>
+			<![CDATA[
         <title>[sites.param2]</title><link>$doregex[makelist]</link><thumbnail></thumbnail>
 ]]>
-        </listrepeat>
-        <expres>
-            <![CDATA[#$pyFunction
+		</listrepeat>
+		<expres>
+			<![CDATA[#$pyFunction
 def GetLSProData(page_data,Cookie_Jar,m,url = ''):
     from resources.lib.modules import client,workers
     import re,xbmc,xbmcgui
@@ -33,18 +33,18 @@ def GetLSProData(page_data,Cookie_Jar,m,url = ''):
     r = re.findall('(?s)<li><a href="([^"]*)" title="([^"]*)', u)
     return r
 ]]>
-        </expres>
-        <page></page>
-    </regex>
-    <regex>
-        <name>makelist</name>
-        <listrepeat>
-            <![CDATA[
-        <title>P3 - [makelist.param3]</title><link>$doregex[playurl]</link><thumbnail>[makelist.param2]</thumbnail>
+		</expres>
+		<page></page>
+	</regex>
+	<regex>
+		<name>makelist</name>
+		<listrepeat>
+			<![CDATA[
+        <title>[makelist.param3]</title><link>$doregex[playurl]</link><thumbnail>[makelist.param2]</thumbnail>
 ]]>
-        </listrepeat>
-        <expres>
-            <![CDATA[#$pyFunction
+		</listrepeat>
+		<expres>
+			<![CDATA[#$pyFunction
 def GetLSProData(page_data,Cookie_Jar,m,url = ''):
     from resources.lib.modules import client,workers
     import re,xbmc,xbmcgui
@@ -67,13 +67,13 @@ def GetLSProData(page_data,Cookie_Jar,m,url = ''):
     r = [(i[0],i[1],unescape(i[2])) for i in r if 'SITERIP' not in i[2]]
     return r
 ]]>
-        </expres>
-        <page></page>
-    </regex>
-    <regex>
-        <name>playurl</name>
-        <expres>
-            <![CDATA[#$pyFunction
+		</expres>
+		<page></page>
+	</regex>
+	<regex>
+		<name>playurl</name>
+		<expres>
+			<![CDATA[#$pyFunction
 def GetLSProData(page_data,Cookie_Jar,m,url = ''):
     from resources.lib.modules import client
     import re
@@ -94,9 +94,9 @@ def GetLSProData(page_data,Cookie_Jar,m,url = ''):
         link = r0[0]
     return link
 ]]>
-        </expres>
-        <page></page>
-    </regex>
+		</expres>
+		<page></page>
+	</regex>
 </item>
 
 <!-- -------------------RECENT LIST------------------- -->
