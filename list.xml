@@ -39,7 +39,7 @@ def GetLSProData(page_data,Cookie_Jar,m,url = ''):
 		<name>makelist</name>
 		<listrepeat>
 			<![CDATA[
-        <title>MINE - [makelist.param3]</title><link>$doregex[playurl]</link><thumbnail>https[makelist.param2]</thumbnail>
+        <title>MINE - [makelist.param3]</title><link>$doregex[playurl]</link><thumbnail>[makelist.param2]</thumbnail>
 ]]>
 		</listrepeat>
 		<expres>
